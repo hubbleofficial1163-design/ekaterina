@@ -974,3 +974,44 @@ footer p {
         box-shadow: none;
     }
 }
+
+/* Дресс-код — фото вместо кружков */
+.dresscode-image-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.dresscode-image {
+    max-width: 70%;
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(74, 55, 41, 0.15);
+    border: 3px solid var(--white);
+    transition: transform 0.4s ease;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    border-style: none !important;
+    border-width: 0 !important;
+    border-color: transparent !important;
+}
+
+.dresscode-image:hover {
+    transform: scale(1.01);
+}
+
+.dresscode-caption {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: var(--dark-brown);
+}
+
+.dresscode-caption i {
+    margin-right: 8px;
+    color: var(--warm-brown);
+}
+
+/* Убираем старую палитру цветов */
+.color-palette {
+    display: none;
+}
