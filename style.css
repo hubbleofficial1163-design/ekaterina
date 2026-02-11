@@ -982,7 +982,7 @@ footer p {
 }
 
 .dresscode-image {
-    max-width: 70%;
+    max-width: 90%;
     width: 400px;
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(74, 55, 41, 0.15);
@@ -1014,4 +1014,12 @@ footer p {
 /* Убираем старую палитру цветов */
 .color-palette {
     display: none;
+}
+
+.dresscode-text {
+    margin-bottom: 5px;  /* почти вплотную */
+}
+
+.dresscode-image-container {
+    margin-top: 0;        /* без отступа сверху */
 }
