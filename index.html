@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Kirill & Ekaterina · Wedding</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50,85 C70,70 85,55 85,40 C85,25 70,15 60,15 C50,15 50,30 50,30 C50,30 50,15 40,15 C30,15 15,25 15,40 C15,55 30,70 50,85 Z' fill='%23e6d5c1' stroke='%23b7a18b' stroke-width='3'/></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Светлая секция для истории */
+        .story-section {
+            background: var(--cream);
+            padding: 70px 0;
+        }
+        .story-content {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--beige);
+            padding: 45px 35px;
+            border-radius: 24px;
+            box-shadow: 0 12px 30px rgba(74,55,41,0.05);
+            font-size: 1.3rem;
+            color: var(--deep-brown);
+            text-align: center;
+            line-height: 1.7;
+        }
+        .story-content p:first-child {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Герой (без фото, чистый градиент) -->
+    <section class="cover-section">
+        <div class="floral-frame"></div>
+        <div class="cover-content">
+            <h1 class="names">Kirill<br>&<br>Ekaterina</h1>
+            <div class="date">18.06.26</div>
+            
+            <div class="greeting-block">
+                <p class="greeting-text">
+                    Дорогие друзья!<br>
+                    Мы приглашаем вас разделить с нами радость этого дня. 
+                    В 2019 мы встретились за кофейной стойкой, 
+                    а теперь зовём вас на нашу свадьбу.
+                </p>
+                <div class="signature">Kirill & Ekaterina</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- История пары — светлая секция, заголовок видно -->
+    <section class="story-section">
+        <div class="container">
+            <h2 class="section-title">Наша история</h2>
+            <div class="story-content">
+                <p>2019 год. Мы — студенты, работаем бариста в одной кофейне. Обычный рабочий день, очередной эспрессо. А потом — 7 лет вместе.</p>
+                <p>Спасибо, что идёте с нами по этому пути.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Сохраните дату / календарь -->
+    <section class="calendar-section">
+        <div class="container">
+            <h2 class="section-title">Сохраните дату</h2>
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <button class="calendar-nav" id="prevMonth">‹</button>
+                    <div class="calendar-month-year" id="currentMonthYear">Июнь 2026</div>
+                    <button class="calendar-nav" id="nextMonth">›</button>
+                </div>
+                <div class="calendar-weekdays">
+                    <div class="calendar-weekday">Пн</div>
+                    <div class="calendar-weekday">Вт</div>
+                    <div class="calendar-weekday">Ср</div>
+                    <div class="calendar-weekday">Чт</div>
+                    <div class="calendar-weekday">Пт</div>
+                    <div class="calendar-weekday">Сб</div>
+                    <div class="calendar-weekday">Вс</div>
+                </div>
+                <div class="calendar-days" id="calendarDays"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Расписание дня -->
+    <section class="timing-section">
+        <div class="container">
+            <h2 class="section-title">Расписание дня</h2>
+            <div class="timing-container">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-coffee"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-time">16:00 – 16:30</div>
+                            <div class="timeline-text">Сбор гостей · фуршет</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-time">16:30 – 17:00</div>
+                            <div class="timeline-text">Фотосессия</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <i class="fas fa-glass-cheers"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-time">17:00</div>
+                            <div class="timeline-text">Начало банкета · торжество</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Локация (фото 1.jpg) -->
+    <section class="location-section">
+        <div class="container">
+            <h2 class="section-title">Локация</h2>
+            <div class="location-block">
+                <div class="location-header">
+                    <h3 class="location-title">Место встречи</h3>
+                </div>
+                <div class="location-content">
+                    <div>
+                        <p class="location-text">
+                            Ресторан «Кофейная чашка» · банкетный зал
+                        </p>
+                        <div class="location-address">
+                            г. Новосибирск,<br>Красный проспект, 22
+                        </div>
+                        <a href="https://yandex.ru/maps/?pt=82.920430,55.030199&z=17&l=map" 
+                           target="_blank" class="map-button">
+                           <i class="fas fa-map-marker-alt"></i> Открыть карту
+                        </a>
+                    </div>
+                    <div class="location-image">
+                        <img src="1.jpg" alt="Ресторан на Красном проспекте">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Дресс‑код -->
+    <section class="dresscode-section">
+        <div class="container">
+            <h2 class="section-title">Дресс-код</h2>
+            <div class="dresscode-content">
+                <p class="dresscode-text">
+                    Поддержите нашу кофейно‑уютную атмосферу. <br>
+                    Природные оттенки, бежевый, коричневый, молочный — как любимый латте.
+                </p>
+                <div class="color-palette">
+                    <div class="color-item color-cream" title="Молочный"></div>
+                    <div class="color-item color-beige" title="Капучино"></div>
+                    <div class="color-item color-taupe" title="Корица"></div>
+                    <div class="color-item color-light-brown" title="Эспрессо с молоком"></div>
+                    <div class="color-item color-warm-brown" title="Тёмный шоколад"></div>
+                    <div class="color-item color-deep-brown" title="Кофе"></div>
+                </div>
+                <p style="margin-top: 30px; font-size: 1.2rem; color: var(--dark-brown);">
+                    <i class="fas fa-tshirt"></i> Фото примеров смотрели в приглашении
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Важные детали (без смайликов) -->
+    <section class="details-section">
+        <div class="container">
+            <h2 class="section-title">Важные детали</h2>
+            <div class="details-block">
+                <div class="details-content">
+                    <div class="details-item">
+                        <div class="details-item-title">Без «Горько!»</div>
+                        <p>Пожалуйста, воздержитесь от криков «Горько» — мы поцелуемся, даже если вы просто улыбнётесь.</p>
+                    </div>
+                    <div class="details-item">
+                        <div class="details-item-title">Без цветов</div>
+                        <p>Пожалуйста, не дарите срезанные цветы. Мы будем рады вашим улыбкам и тёплым словам.</p>
+                    </div>
+                    <div class="details-item">
+                        <div class="details-item-title">Подарки</div>
+                        <p>Ваше присутствие — главный подарок. Если хотите порадовать нас — предпочтительны подарки в конверте.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Анкета -->
+    <section class="form-section">
+        <div class="container">
+            <h2 class="section-title">Подтвердите участие</h2>
+            <p style="text-align: center; color: var(--dark-brown); font-size: 1.3rem; margin-bottom: 40px;">
+                Пожалуйста, ответьте до 1 июня 2026
+            </p>
+            
+            <div id="notification" class="notification"></div>
+            
+            <div class="form-container">
+                <form id="weddingForm">
+                    <div class="form-group">
+                        <label for="name">Ваше имя и фамилия *</label>
+                        <input type="text" id="name" name="name" required placeholder="Иван Иванов">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Ваш телефон *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+7 (999) 123-45-67">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="guests">Количество гостей (включая вас)</label>
+                        <select id="guests" name="guests">
+                            <option value="1">1</option>
+                            <option value="2" selected>2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Присутствие *</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="attendance" value="yes" required>
+                                <span>С радостью приду!</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="attendance" value="no">
+                                <span>К сожалению, не смогу</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="attendance" value="maybe">
+                                <span>Пока не уверен(а)</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Предпочтения по напиткам</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="alcohol" value="red_wine">
+                                <span>Красное вино</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="alcohol" value="white_wine">
+                                <span>Белое вино</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="alcohol" value="champagne">
+                                <span>Шампанское</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="alcohol" value="coffee">
+                                <span>Кофе ☕</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="alcohol" value="non_alcoholic">
+                                <span>Безалкогольные</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="allergies">Аллергии или особенности питания</label>
+                        <textarea id="allergies" name="allergies" rows="3" placeholder="Например: вегетарианство, непереносимость лактозы..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Ваши пожелания и поздравления</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Напишите пару слов..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">Отправить ответ</button>
+                </form>
+                
+                <div class="closing-message">
+                    Спасибо, что разделите с нами этот день!<br>
+                    С любовью, Kirill & Ekaterina
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="footer-floral"></div>
+        <div class="container footer-content">
+            <p>Kirill & Ekaterina</p>
+            <p>18.06.26 · Новосибирск</p>
+            <p>Кофейная история длиною в 7 лет</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
